@@ -12,22 +12,6 @@ django\_typeform\.apps module
     :undoc-members:
     :show-inheritance:
 
-django\_typeform\.models module
--------------------------------
-
-.. automodule:: django_typeform.models
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-django\_typeform\.urls module
------------------------------
-
-.. automodule:: django_typeform.urls
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 
 Module contents
 ---------------
