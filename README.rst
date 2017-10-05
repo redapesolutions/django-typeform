@@ -11,6 +11,7 @@ Django Typeform
 .. image:: https://codecov.io/gh/redapesolutions/django-typeform/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/redapesolutions/django-typeform
 
+
 A Typeform integration for Django
 
 Documentation
@@ -35,42 +36,26 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add Django Typeform's URL patterns:
+Add Django Typeform's static files to your template:
 
-.. code-block:: python
+.. code-block:: html
 
-    from django_typeform import urls as django_typeform_urls
+    <script src="{% static 'django_typeform/embed.js' %}"></script>
 
+Usage:
 
-    urlpatterns = [
-        ...
-        url(r'^', include(django_typeform_urls)),
-        ...
-    ]
+.. code-block:: html
+
+    {% load django_typeform %}
+    <html>
+        <body>
+            <div class="my-typeform"></div>
+            <script src="{% static 'django_typeform/embed.js' %}"></script>
+            {% typeforms_embed 'https://xxxx.typeform.com/to/xxxxxx' '.my-typeform' '{"hideHeaders": true, "hideFooter": true}' %}
+        </body>
+    </html>
 
 Features
 --------
 
-* TODO
-
-Running Tests
--------------
-
-Does the code actually work?
-
-::
-
-    source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install tox
-    (myenv) $ tox
-
-Credits
--------
-
-Tools used in rendering this package:
-
-*  Cookiecutter_
-*  `cookiecutter-djangopackage`_
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+* Embed SDK Support
