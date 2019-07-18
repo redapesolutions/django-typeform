@@ -1,8 +1,11 @@
 # Config file for automatic testing at travis-ci.org
 
+dist: xenial
+
 language: python
 
 python:
+  - "3.6"
   - "3.7"
 
 env:
