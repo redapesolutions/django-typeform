@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^testform/', TypeformView.as_view(
         template_name='typeform_test.html',
         form_class=MyForm,
+        success_url='/yeah/',
     ))
 ]
