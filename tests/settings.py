@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
+    'django.contrib.sessions',
     "django_typeform",
     "sekizai",
 ]
@@ -35,6 +36,11 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, "tests/templates")],
         'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.request',
+            ]
+        }
     },
 ]
 
@@ -42,6 +48,8 @@ TEMPLATES = [
 SITE_ID = 1
 
 if django.VERSION >= (1, 10):
-    MIDDLEWARE = ()
+    MIDDLEWARE = (
+        'django.contrib.sessions.middleware.SessionMiddleware',
+    )
 else:
     MIDDLEWARE_CLASSES = ()

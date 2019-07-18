@@ -1,7 +1,7 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from django.test import Client
 
-class TypeformViewTest(SimpleTestCase):
+class TypeformViewTest(TestCase):
     def test_view(self):
         c = Client()
         response = c.get('/testform/')

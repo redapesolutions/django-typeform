@@ -6,12 +6,12 @@ from django.test import SimpleTestCase
 
 
 class MyForm(TypeformMixin, Form):
-    pass
+    typeform_url='https://whatever.typeform.com/to/xxxxxx'
 
 
 class TypeformMixinTest(SimpleTestCase):
     def test_mixin(self):
-        form = MyForm(typeform_url='https://whatever.typeform.com/to/xxxxxx')
+        form = MyForm()
         self.assertEqual(form.typeform_id, 'xxxxxx')
 
     def test_mixin_rendering(self):
