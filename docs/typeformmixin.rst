@@ -2,8 +2,11 @@
 TypeformMixin
 =============
 
-The ``TypeformMixin`` is a mixin for Django's form class. To turn
-Typeform features on for a Django form just use the Mixin:
+To process a typeform in Django just the way you would process a Django form,
+use the ``TypeformMixin``. It requires the typeform to be mirrored by a corresponding
+Django form, question by question, but can also contain processing logic.
+To turn Typeform features on for a Django form just use the Mixin and specify
+the ``typeform_url``:
 
 .. code-block:: python
 
@@ -14,7 +17,7 @@ Typeform features on for a Django form just use the Mixin:
     class MyTypeForm(TypeformMixin, MyForm)
         typeform_url = 'https://xxxx.typeform.com/to/xxxxxx'
 
-``MyTypeForm`` will be a fully fledge Django form and at the same
+``MyTypeForm`` will be a fully fledged Django form and at the same
 time be linked to the Typeform with given url.
 
 For this link to work, the ``Question reference`` for each Typeform

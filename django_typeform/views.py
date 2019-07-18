@@ -4,7 +4,6 @@
 from django.views import View
 from django.views.generic.edit import FormMixin
 from django.views.generic.base import TemplateResponseMixin
-from .forms import TypeformMixin
 
 
 class BaseTypeformView(FormMixin, View):
