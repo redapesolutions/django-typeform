@@ -1,5 +1,4 @@
-django-sekizai
-python-dateutil
+-r requirements.txt
 
 coverage==4.4.1
 mock>=1.0.1

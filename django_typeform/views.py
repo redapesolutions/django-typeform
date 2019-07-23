@@ -24,8 +24,8 @@ class BaseTypeformView(FormMixin, View):
         check if it's valid.
         """
 
-        if 'typeform_uid' in request.POST:
-            request.POST = self.form_class().typeform_to_query_dict(request.POST.get('typeform_uid'))
+        if 'typeformuid' in request.POST:
+            request.POST = self.form_class().typeform_to_query_dict(request.POST.get('typeformuid'))
             return self.post(request, *args, **kwargs)
         form = self.get_form()
         if form.is_valid():

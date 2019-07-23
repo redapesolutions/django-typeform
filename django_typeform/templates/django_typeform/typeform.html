@@ -1,12 +1,12 @@
 {% load sekizai_tags static %}
-<div id="{{ typeform_uid }}" style="height: {{ height }};"></div>
-<input type="hidden" name="typeform_uid" value="{{ typeform_uid }}" />
+<div id="{{ typeformuid }}" style="height: {{ height }};"></div>
+<input type="hidden" name="typeformuid" value="{{ typeformuid }}" />
 {% addtoblock 'js' %}<script src="https://embed.typeform.com/embed.js"></script>{% endaddtoblock %}
 {% addtoblock 'js' %}{% spaceless %}
   <script>
     (function () {
-        var el = document.getElementById('{{ typeform_uid }}');
-        var url = '{{ typeform_url }}?typeformuid={{ typeform_uid }}';
+        var el = document.getElementById('{{ typeformuid }}');
+        var url = '{{ typeform_url }}?typeformuid={{ typeformuid }}';
         var options = {
           hideHeaders: {{ typeform_hide_headers|yesno:"true,false,true" }},
           hideFooter: {{ typeform_hide_footer|yesno:"true,false,true" }},

@@ -1,13 +1,16 @@
 from django.forms import Form
+from django.http import QueryDict
 from django.template import Context
+from django.test import SimpleTestCase
 
 from django_typeform.forms import TypeformMixin
-from django.test import SimpleTestCase
 
 
 class MyForm(TypeformMixin, Form):
     typeform_url='https://whatever.typeform.com/to/xxxxxx'
 
+    def typeform_to_query_dict(self, typeformuid):
+        return QueryDict()   # Set actual response query to nop
 
 class TypeformMixinTest(SimpleTestCase):
     def test_mixin(self):

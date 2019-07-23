@@ -22,13 +22,27 @@ TYPEFORM_FORM = getattr(settings, 'TYPEFORM_FORM', None)
 TYPEFORM_TOKEN = getattr(settings, 'TYPEFORM_TOKEN', "")
 TYPEFORM_CHOICES = getattr(settings, 'TYPEFORM_CHOICES', {})
 
-class TypeformResponses(object):
-    form = None
 
+class TypeformResponses(object):
+    """
+    Retrieve typeform response answers and convert them to Django form compatible
+    formats.
+
+    "Decode" is a dictionary of functions to decode results returned as json objects by
+    the typeform response api. Currently it supports choice fields and date fields.
+    Additional fields to be added.
+    
+    All types not listed in decode will follow the rule lambda x: x[answer['type']],
+    i.e. the property named after the answer type contains the result.
+
+    Since Django separates representation and answers for choice fields, answers
+    will have to converted back to representationd in _to_choice_field.
+    """
     decode = {
         'choice': lambda x: x['choice']['label'] if x['choice'] else None,
         'date': lambda x: parse[x['date']],
     }
+    form = None
 
     def __init__(self, *args, **kwargs):
         self.form_id = kwargs.pop('form', TYPEFORM_FORM)
@@ -64,6 +78,17 @@ class TypeformResponses(object):
         return data
 
     def _to_choice_field(self, value, form_id, form_field):
+        """
+        Convert choice field value to Django FormField representation in
+        two-step process. First try form_field.choices attribute to find
+        representation. Secondly, try TYPEFORM_CHOICES setting which contains
+        a dictionary for choices attributes for a given typeform id.
+
+        :param value: Returned value from response api
+        :param form_id: typeform id
+        :param form_field: ChoiceField object
+        :return:
+        """
         if form_field:
             choices = getattr(form_field, 'choices', [])
             for choice in choices:

@@ -1,5 +1,5 @@
-
-# Additional requirements go here
 django-sekizai
 python-dateutil
+
+# Additional requirements go here
 
