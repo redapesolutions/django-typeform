@@ -36,22 +36,14 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add Django Typeform's static files to your template:
-
-.. code-block:: html
-
-    <script src="{% static 'django_typeform/embed.js' %}"></script>
-
-Usage:
+Usage as template tag:
 
 .. code-block:: html
 
     {% load django_typeform %}
     <html>
         <body>
-            <div class="my-typeform"></div>
-            <script src="{% static 'django_typeform/embed.js' %}"></script>
-            {% typeforms_embed 'https://xxxx.typeform.com/to/xxxxxx' '.my-typeform' '{"hideHeaders": true, "hideFooter": true}' %}
+            {% typeforms_embed 'https://xxxx.typeform.com/to/xxxxxx' 'my-typeform' '{"hideHeaders": true, "hideFooter": true}' %}
         </body>
     </html>
 
@@ -59,3 +51,6 @@ Features
 --------
 
 * Embed SDK Support
+* Results API support
+* TypeformMixin to use Django forms to process typeform results
+* TypeformView to transparently integrate typeforms into the Django framework

@@ -1,7 +1,11 @@
 # -*- coding: utf-8
 from __future__ import unicode_literals, absolute_import
 
+import os
+
 import django
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DEBUG = True
 USE_TZ = True
@@ -22,12 +26,27 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
+    'django.contrib.sessions',
     "django_typeform",
+    "sekizai",
 ]
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, "tests/templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.request',
+            ]
+        }
+    },
+]
+
 
 SITE_ID = 1
 
-if django.VERSION >= (1, 10):
-    MIDDLEWARE = ()
-else:
-    MIDDLEWARE_CLASSES = ()
+MIDDLEWARE = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+)

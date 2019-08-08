@@ -1,0 +1,31 @@
+{% load sekizai_tags static %}
+<div id="{{ typeformuid }}" style="height: {{ height }};"></div>
+<input type="hidden" name="typeformuid" value="{{ typeformuid }}" />
+{% addtoblock 'js' %}<script src="https://embed.typeform.com/embed.js"></script>{% endaddtoblock %}
+{% addtoblock 'js' %}{% spaceless %}
+  <script>
+    (function () {
+        var el = document.getElementById('{{ typeformuid }}');
+        var url = '{{ typeform_url }}?typeformuid={{ typeformuid }}';
+        var options = {
+          hideHeaders: {{ typeform_hide_headers|yesno:"true,false,true" }},
+          hideFooter: {{ typeform_hide_footer|yesno:"true,false,true" }},
+      {% if mode %}
+          mode: "{{ mode }}",
+      {% endif %}
+          onSubmit: function (e) {
+            var parent = el;
+            while(parent && parent.nodeName != 'FORM') {
+              parent = parent.parentNode;
+            }
+            parent.submit();
+          },
+        };
+      {% if mode %}
+        typeformEmbed.makePopup(el, url, options);
+      {% else %}
+        typeformEmbed.makeWidget(el, url, options);
+      {% endif %}
+      })();
+  </script>{% endspaceless %}
+{% endaddtoblock %}
