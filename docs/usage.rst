@@ -12,11 +12,26 @@ To use Django Typeform in a project, add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add Django Typeform's static files to your template:
+Make sure your TEMPLATE OPTIONS' context_processors include
 
-.. code-block:: html
+.. code-block:: python
 
-    <script src="{% static 'django_typeform/embed.js' %}"></script>
+    TEMPLATES = [
+        {
+            ...
+            'OPTIONS': {
+                'context_processors': [
+                    ...
+                    'django.template.context_processors.request',
+                    ...
+                ]
+            }
+        },
+    ]
+
+The ``typeform_embed`` template tag includes a ``<div>`` at its position. It carries
+a class
+
 
 Example:
 
@@ -25,20 +40,7 @@ Example:
     {% load django_typeform %}
     <html>
         <body>
-            <div class="my-typeform"></div>
-            <script src="{% static 'django_typeform/embed.js' %}"></script>
-            {% typeforms_embed 'https://xxxx.typeform.com/to/xxxxxx' '.my-typeform' '{"hideHeaders": true, "hideFooter": true}' %}
+             {% typeforms_embed 'https://xxxx.typeform.com/to/xxxxxx' '.my-typeform' '{"hideHeaders": true, "hideFooter": true}' %}
         </body>
     </html>
 
-
-... code-block:: html
-
-    {% load django_typeform %}
-    <html>
-        <body>
-            <div id="my-css-selector"></div>
-            <script src="{% static 'django_typeform/embed.js' %}"></script>
-            {% typeforms_embed 'https://xxxx.typeform.com/to/xxxxxx' '#my-css-selector' options_as_dict_var %}
-        </body>
-    </html>

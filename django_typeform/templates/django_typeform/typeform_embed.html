@@ -1,6 +1,14 @@
-<script>
-    var el = document.querySelector('{{ selector }}');
-    var url = '{{ url }}';
-    var options = {{ options|safe }};
-    typeformEmbed.makeWidget(el, url, options);
-</script>
+{% load sekizai_tags static %}
+<div class="{{ selector }}"></div>
+{% addtoblock 'js' %}<script src="https://embed.typeform.com/embed.js"></script>{% endaddtoblock %}
+{% addtoblock 'js' %}{% spaceless %}
+  <script src="{% static 'django_typeform/embed.js' %}"></script>
+  <script>
+    (function () {
+        var el = document.querySelector('.{{ selector }}');
+        var url = '{{ url }}';
+        var options = {{ options|safe }};
+        typeformEmbed.makeWidget(el, url, options);
+      })();
+  </script>{% endspaceless %}
+{% endaddtoblock %}

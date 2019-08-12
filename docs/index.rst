@@ -13,7 +13,10 @@ Contents:
 
    readme
    installation
+   configuration
    usage
+   typeformmixin
+   typeformview
    contributing
    authors
    history
