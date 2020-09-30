@@ -12,7 +12,7 @@ Django Typeform
     :target: https://codecov.io/gh/redapesolutions/django-typeform
 
 
-A Typeform integration for Django
+A Typeform integration for Django.
 
 Documentation
 -------------
@@ -22,7 +22,7 @@ The full documentation is at https://django-typeform.readthedocs.io.
 Quickstart
 ----------
 
-Install Django Typeform::
+Install Django Typeform:::
 
     pip install django-typeform
 
@@ -53,4 +53,4 @@ Features
 * Embed SDK Support
 * Results API support
 * TypeformMixin to use Django forms to process typeform results
-* TypeformView to transparently integrate typeforms into the Django framework
+* TypeformView to transparently integrate to typeforms into the Django framework
