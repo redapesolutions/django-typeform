@@ -1,5 +1,5 @@
 ============
-Contributing
+Contributing in an amazing project
 ============
 
 Contributions are welcome, and they are greatly appreciated! Every
@@ -27,13 +27,13 @@ Fix Bugs
 Look through the GitHub issues for bugs. Anything tagged with "bug"
 is open to whoever wants to implement it.
 
-Implement Features
+Implemented Features
 ~~~~~~~~~~~~~~~~~~
 
 Look through the GitHub issues for features. Anything tagged with "feature"
 is open to whoever wants to implement it.
 
-Write Documentation
+Write Documentation 
 ~~~~~~~~~~~~~~~~~~~
 
 Django Typeform could always use more documentation, whether as part of the 
@@ -52,7 +52,7 @@ If you are proposing a feature:
 * Remember that this is a volunteer-driven project, and that contributions
   are welcome :)
 
-Get Started!
+Get Started to the journey!
 ------------
 
 Ready to contribute? Here's how to set up `django-typeform` for local development.
