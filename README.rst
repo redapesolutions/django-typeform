@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Django Typeform  doit now
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
