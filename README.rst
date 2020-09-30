@@ -1,5 +1,6 @@
 =============================
 Django Typeform
+ That was amazing dud
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
