@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Typeform 
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
@@ -47,7 +47,7 @@ Usage as template tag:
         </body>
     </html>
 
-Features
+great Features
 --------
 
 * Embed SDK Support
