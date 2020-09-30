@@ -24,6 +24,8 @@ Quickstart
 
 Install Django Typeform::
 
+amazing Project
+
     pip install django-typeform
 
 Add it to your `INSTALLED_APPS`:
