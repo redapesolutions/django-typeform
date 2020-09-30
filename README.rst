@@ -14,7 +14,7 @@ Django Typeform
 
 A Typeform integration for Django
 
-Documentation
+Follow Documentation
 -------------
 
 The full documentation is at https://django-typeform.readthedocs.io.
