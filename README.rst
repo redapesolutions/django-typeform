@@ -1,5 +1,6 @@
 =============================
-Django Typeform
+Django Typeform //Django is an advanced Web framework written in Python that makes use of the model view controller (MVC) architectural pattern
+
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
