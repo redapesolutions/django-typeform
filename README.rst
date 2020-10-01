@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Django Typeform-A learning platform
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
