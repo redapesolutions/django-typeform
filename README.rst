@@ -1,6 +1,6 @@
-=============================
-Django Typeform
-=============================
+=========================================================
+Django Typeform-:An Amazing website in Python's Framework
+==========================================================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
     :target: https://badge.fury.io/py/django-typeform
