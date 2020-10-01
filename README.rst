@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Django an ultimate form
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
@@ -28,7 +28,7 @@ Install Django Typeform::
 
 Add it to your `INSTALLED_APPS`:
 
-.. code-block:: python
+.. code-block:: python3.0
 
     INSTALLED_APPS = (
         ...
@@ -38,7 +38,7 @@ Add it to your `INSTALLED_APPS`:
 
 Usage as template tag:
 
-.. code-block:: html
+.. code-block:: html5
 
     {% load django_typeform %}
     <html>
