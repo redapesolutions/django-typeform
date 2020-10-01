@@ -1,4 +1,5 @@
 # Config file for automatic testing at travis-ci.org
+# This is an amazing project
 
 dist: xenial
 
