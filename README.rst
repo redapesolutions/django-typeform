@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Django Typeform - A Web Based Platform to create anything from Surveys to Apps
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
