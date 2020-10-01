@@ -1,7 +1,7 @@
 =============================
 Django Typeform
 =============================
-
+Is an amazing website and very practical use of Django
 .. image:: https://badge.fury.io/py/django-typeform.svg
     :target: https://badge.fury.io/py/django-typeform
 
