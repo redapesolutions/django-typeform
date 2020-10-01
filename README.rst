@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Django Amazing Typeform
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
