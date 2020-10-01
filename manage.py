@@ -10,3 +10,7 @@ if __name__ == "__main__":
     from django.core.management import execute_from_command_line
 
     execute_from_command_line(sys.argv)
+    print("hello world")
+    n1 = input()
+    print("enter your name")
+    print("your name is :",str(n1))
