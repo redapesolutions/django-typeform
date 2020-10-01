@@ -51,6 +51,6 @@ Features
 --------
 
 * Embed SDK Support
-* Results API support
+* Results API Support
 * TypeformMixin to use Django forms to process typeform results
 * TypeformView to transparently integrate typeforms into the Django framework
