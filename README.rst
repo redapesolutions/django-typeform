@@ -25,6 +25,8 @@ Quickstart
 Install Django Typeform::
 
     pip install django-typeform
+    
+    (you should type this in powershell or command prompt )
 
 Add it to your `INSTALLED_APPS`:
 
