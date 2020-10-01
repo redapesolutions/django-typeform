@@ -1,3 +1,5 @@
+This is a required readme file for proper working of code.
+
 =============================
 Django Typeform
 =============================
