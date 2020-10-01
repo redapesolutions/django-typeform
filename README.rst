@@ -36,7 +36,7 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Usage as template tag:
+Usage in the form of template tag:
 
 .. code-block:: html
 
