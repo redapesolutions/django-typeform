@@ -1,5 +1,5 @@
 =============================
-Django Typeform
+Django Typeform - Amazing
 =============================
 
 .. image:: https://badge.fury.io/py/django-typeform.svg
@@ -50,7 +50,7 @@ Usage as template tag:
 Features
 --------
 
-* Embed SDK Support
+* Embed SDK Support this is amazing
 * Results API support
 * TypeformMixin to use Django forms to process typeform results
 * TypeformView to transparently integrate typeforms into the Django framework
