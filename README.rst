@@ -19,7 +19,7 @@ Documentation
 
 The full documentation is at https://django-typeform.readthedocs.io.
 
-Quickstart
+Quickstart Guide
 ----------
 
 Install Django Typeform::
